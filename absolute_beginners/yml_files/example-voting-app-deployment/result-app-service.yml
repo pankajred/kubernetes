@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: result-service
+  labels:
+    name: result-service
+    app: demo-voting-app
+spec:
+  # type: LoadBalancer #does't support on VM machien, it's support on gcp
+  type: nodePort: 30008 # on VM we have to user nodePort. 
+  selector:
+    name: result-app-pod
+    app: demo-voting-app
+  ports:
+  - port: 80
+    targetPort: 80

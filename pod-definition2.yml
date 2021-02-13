@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: Pod
+metadata:
+  name: myapp-pod
+# under labels we can give any key:value pair, it does not provide any suggestion.
+  labels:
+    name: myapp-pod
+    app: myapp
+    type: pod
+spec:
+  containers:
+  - name: nginx-image
+    image: nginx

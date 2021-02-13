@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-webserver
+  labels:
+    name: fc-nginx-n1
+spec:
+  containers:
+  - name: fc-nginx-n1
+    image: nginx:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"

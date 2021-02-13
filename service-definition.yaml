@@ -8,6 +8,7 @@ spec:
   ports:
   type: LoadBalancer
   - port: 80
+    targetPort: 80
     protocol: TCP
   selector:
     run: my-nginx
